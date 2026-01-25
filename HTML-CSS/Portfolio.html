@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(to right, #eef2f7, #ffffff);
+        margin: 0;
+        padding: 2px 2px;
+        line-height: 1.7;
+        color: #333;
+    }
+    #nav{
+            background-color: rgba(249, 248, 248, 0.804);
+            width: 100%;
+            height: 60px;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 7px;
+            box-shadow: rgb(189, 185, 185) 1px 1px  ;
+            position: sticky;
+            top: 0;  
+        }
+        #nav a{
+            padding: 10px; 
+            text-decoration: none;
+            color: rgb(45, 42, 42);
+        }
+        #nav a:hover{
+            font-size: 1.1rem;
+        }
+        #nav p{
+            font-size: 25px;
+            font-weight: bold;
+            color: rgb(45, 42, 42);
+        }
+    #about{
+        text-align: left;
+        margin-left: 30px;
+        font-size: 30px;
+    }
+    h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+    }
+
+    body > p {
+        text-align: center;
+        margin: 4px 0;
+        color: #666;
+    }
+
+    h2 {
+        text-align: center;
+        color: #34495e;
+        margin-top: 30px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #ddd;
+    }
+
+    h3 {
+        color: #2c3e50;
+        margin-top: 20px;
+    }
+
+    hr {
+        margin: 30px auto;
+        border: none;
+        border-top: 1px solid #ccc;
+        max-width: 800px;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+
+    ul {
+        max-width: 400px;
+        margin: 15px auto;
+        padding: 15px 25px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    h3 + p {
+        background-color: #ffffff;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        max-width: 800px;
+        margin: 10px auto;
+    }
+
+    form {
+        background-color: #ffffff;
+        padding: 25px;
+        margin: 20px auto;
+        max-width: 420px;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+     button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        margin-top: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body> 
+    <div id="nav">
+        <p class="name">Rishabh Pandey</p>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Projects</a>
+        <a href="#skill">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <h2 id="about">About Me</h2>
+    <p>
+        I am a Computer Science Engineering student passionate about web development,
+        data science, and software projects. I love building real-world applications
+        and learning new technologies.
+    </p>
+
+    <hr>
+
+    <h2 id="skill">Skills</h2>
+    <ul>
+        <li>C++</li>
+        <li>Python</li>
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>MongoDB</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="project">Projects</h2>
+
+    <h3>1. Daily Habit Tracker (MERN)</h3>
+    <p>
+        A full-stack web app to track habits, streaks, and progress using React,
+        Node.js, Express, and MongoDB.
+    </p>
+
+    <h3>2. YouTube Trending Video Prediction</h3>
+    <p>
+        A machine learning project to predict whether a video will trend based on
+        likes, comments, and views.
+    </p>
+
+    <hr>
+
+    <h2>Education</h2>
+    <p>
+        B.Tech in Computer Science Engineering<br>
+        Lovely Professional University<br>
+        CGPA: 8.51
+    </p>
+
+    <p>
+        Class 12(CBSE Board)<br>
+        Stream: Science (PCM)<br>
+        School: St.Joseph School<br>
+        Year: 2023
+    </p>
+
+    <hr>
+
+    <h2 id="contact">Contact Me</h2>
+<form>
+    <p>Name:</p>
+    <input type="text">
+
+    <p>Email:</p>
+    <input type="email">
+
+    <p>Gender:</p>
+    <select>
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+
+    <p>Message:</p>
+    <textarea rows="4" cols="30"></textarea>
+
+    <br><br>
+    <button type="submit">Send</button>
+</form>
+
+
+</body>
+</html>

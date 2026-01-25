@@ -1,0 +1,20 @@
+- var -> we can redeclare the var
+eg. var a; --> declaration , a=2 --> Assingment, var a = 5 --> ReDeclaration and Assingment
+
+- Hositing -> when we print before the declaration and it will give the undefined only in var possible
+
+- let -> We can reassign the value but can not redeclare
+
+- const -> we can not only declare the value using cosnt we have to assign also
+
+- undefined and NUll
+            var value;  
+            console.log(value, typeof(value)); --> type will be undefined
+            value = null; --> assign value null
+            console.log(value, typeof(value)); --> type will be object (this is the design mistake in the javascript)
+
+- array inbuilt fuction --> push, pop, slice, splice, shift, unshift
+
+- There are 6  falsey value in javascript --> null, undefined, "", false, NaN, 0 
+
+- 

@@ -1,0 +1,9 @@
+- Emeet syntax : bulk of tags at once -> eg. div>span{this is span $}*10 
+                it will create the 10 span tags inside the div tag
+
+- Sementic tags : Meaningful tag which tells what it does eg. header, section, navigation, etc
+
+- Attribute : Extra information about the tag
+
+- If we give the relative to the parent and then absolute position  to the child then the
+ child will move will move with respect to the parent

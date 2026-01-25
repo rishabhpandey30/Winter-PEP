@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .box{
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        background-color: antiquewhite;
+        display: inline-block;
+    }
+    .bigbox{
+        border: 2px solid black;
+        width: 300px;
+        height: 300px;
+        background-color: rgb(90, 141, 185);
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .smallbox{
+        border: 2px solid black;
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        box-shadow: 0.6rem 0.6rem 1rem black;
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+    }
+    .smallbox1{
+        border: 2px solid black;
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        box-shadow: 0.6rem 0.6rem 1rem black;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .smallbox2{
+        border: 2px solid black;
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        box-shadow: 0.6rem 0.6rem 1rem black;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .smallbox3{
+        border: 2px solid black;
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        box-shadow: 0.6rem 0.6rem 1rem black;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+</style>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <div class="bigbox">
+        <div class="smallbox"></div>
+        <div class="smallbox1"></div>
+        <div class="smallbox2"></div>
+        <div class="smallbox3"></div>
+    </div>
+
+</body>
+</html>

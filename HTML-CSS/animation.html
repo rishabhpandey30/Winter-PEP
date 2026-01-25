@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{ 
+            height: 300px;
+            width: 300px;
+            border: 1.5px solid rgb(90, 83, 83);
+            background-color: antiquewhite;
+            margin: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .boxx{ 
+            height: 60px;
+            width: 60px;
+            border: 1.5px solid rgb(90, 83, 83);
+            background-color: rgb(133, 9, 17);
+            margin: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: 2s ease-in-out infinite slide-in ;
+        }
+        .boxx1{ 
+            height: 60px;
+            width: 60px;
+            border: 1.5px solid rgb(90, 83, 83);
+            background-color: rgb(172, 115, 40);
+            margin: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: 2s ease-in-out infinite slide-inn ;
+        }
+        .box2{ 
+            height: 300px;
+            width: 300px;
+            border: 1.5px solid rgb(90, 83, 83);
+            background-color: antiquewhite;
+            margin-left: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1{ 
+            height: 200px;
+            width: 200px;
+            border: 1.5px solid rgb(90, 83, 83);
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOdSxgVkc6J-0W0p6m98_h8DBzbRDaK_93fQ&s);
+            background-size:cover;
+            transition: all 0.6s;
+        }
+
+        .box1:hover{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv_KDgPA7y3uP8GE56xSX0rIg9np0BiwG13w&s);
+        }
+        @keyframes slide-in{
+            0%{
+                transform: translateX(0px) rotate(360deg);
+            }
+            50%{
+                transform: translateX(100px);
+                
+            }
+            100%{
+                transform: translateX(0px) rotate(360deg);
+            }
+        }
+        @keyframes slide-inn{
+            0%{
+                transform: translateX(0px) rotate(360deg);
+            }
+            50%{
+                transform: translateX(-100px);
+                
+            }
+            100%{
+                transform: translateX(0px) rotate(360deg);
+            }
+        }
+        /* .boxx:hover{
+            animation: slide-in 1s ease-in-out infinite;
+
+        } */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            </div>
+    </div>
+
+    <br>
+    <div class="box2">
+        <div class="boxx1"></div>
+        <div class="boxx"></div>
+    </div>
+</body>
+</html>
