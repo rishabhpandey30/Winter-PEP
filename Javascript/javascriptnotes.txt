@@ -14,7 +14,22 @@ eg. var a; --> declaration , a=2 --> Assingment, var a = 5 --> ReDeclaration and
             console.log(value, typeof(value)); --> type will be object (this is the design mistake in the javascript)
 
 - array inbuilt fuction --> push, pop, slice, splice, shift, unshift
+                           **in arr we only use for of loop not for in**
 
 - There are 6  falsey value in javascript --> null, undefined, "", false, NaN, 0 
 
-- 
+- Logical operator -> It will give priority to the & operator first
+        || (or) operator -> it will give the first truthy value if truthy is present
+                            it will give the last falsy value when all the value are false
+        & (and) operator -> it will give the first falsely value if any one value is false
+                            it will give the last truthy value when all the value are truth
+
+- Coercion -> converting the data implicitly(auto conversion)
+
+- When we try to explicitly convert the number which is not a number then it will give me the NaN
+
+Primitive datatype is store in the stack and changing one do not affect the other
+but in non Primitive datatype it is store on the heap and the address is stored so if we 
+change the one other get change automatically 
+for eg . -> a = 12 , b =a then if we change the a then b will not affect
+            a = [1,2,3] b =a if we chamge a then b will automatically update as it is stored as address
