@@ -18,6 +18,20 @@ console.log(value);
 var value = arr.splice(0,1,5);
 console.log(arr);
 
+// arr1.concat(arr2)
+arr1 = ["name", "age"];
+arr2 = ["sdf", "class"];
+console.log(arr1.concat(arr2))
+
+// join() ->convert element to a string with sepeator
+console.log(arr1.join(" "))
+
+// split() , reverse(), 
+//Q1. 
+arr = [1,2,3,4,5];
+arr.splice(0,2,0)
+console.log(arr)
+
 // object
 let ob = {
     name : "Rishabh",

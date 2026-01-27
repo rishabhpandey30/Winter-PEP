@@ -28,8 +28,17 @@ eg. var a; --> declaration , a=2 --> Assingment, var a = 5 --> ReDeclaration and
 
 - When we try to explicitly convert the number which is not a number then it will give me the NaN
 
-Primitive datatype is store in the stack and changing one do not affect the other
+- In parseFloat it give me the number if it contain alphabet also for eg -> 12ab it will give me 12
+    But when we do Number to convert the string it will give me NaN if it conatain alphabet
+
+- Primitive datatype is store in the stack and changing one do not affect the other
 but in non Primitive datatype it is store on the heap and the address is stored so if we 
 change the one other get change automatically 
 for eg . -> a = 12 , b =a then if we change the a then b will not affect
             a = [1,2,3] b =a if we chamge a then b will automatically update as it is stored as address
+        
+- Optional chaining -> we use ? to avoid the error 
+                        for eg. (person?.address?.city)  
+                        if address key is not present then it will not give the error it will give undefined
+
+- ForEach always return undefined
