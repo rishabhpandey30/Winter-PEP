@@ -41,4 +41,11 @@ for eg . -> a = 12 , b =a then if we change the a then b will not affect
                         for eg. (person?.address?.city)  
                         if address key is not present then it will not give the error it will give undefined
 
-- ForEach always return undefined
+- ForEach always return undefined and it will take upto 3 parameter element, index, and full array(same array modify)
+
+- Map return the new modified array do not change the actual array, it takes callback function
+
+- Filter -> give me the filtered value in the new array do not change the actual array
+
+- Reduce -> Combine all elements of an array into a single value
+            It take the parameter : 1. callback function 2.initial value
