@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    document.body.style.backgroundColor = "black"
+    let nav = document.createElement("nav");
+    nav.style.height = "50px"
+    nav.style.width = "100%"
+    nav.style.border = "1px solid black"
+    nav.style.display = "flex";
+    nav.style.justifyContent = "space-around";
+    nav.style.alignItems = "center";  
+    nav.style.background = "#0b1020"
+    document.body.append(nav)
+
+    let a1 = document.createElement("a");
+    let a2 = document.createElement("a");
+    let a3 = document.createElement("a");
+    let a4 = document.createElement("a");
+    a1.href = "nav.html"
+    a2.href = "nav.html"
+    a3.href = "nav.html"
+    a4.href = "nav.html"
+    a1.innerText = "Home"
+    a1.style.fontSize = "1.2rem"
+    a1.style.color = "white"
+    a2.innerText = "About us"
+    a2.style.fontSize = "1.2rem"
+    a2.style.color = "white"
+    a3.innerText = "Contact"
+    a3.style.fontSize = "1.2rem"
+    a3.style.color = "white"
+    a4.innerText = "Project"
+    a4.style.fontSize = "1.2rem"
+    a4.style.color = "white"
+    nav.append(a1,a2,a3,a4)
+</script>
+</html>

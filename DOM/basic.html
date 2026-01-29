@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="para">This is div
+    <p id="p">This is para</p>
+    </div>
+    <div class="tag">This is also a div 1</div>   
+    <div class="tag">This is also a div 2</div>  
+    <div class="tag">This is also a div 3</div>  
+    <div class="tag">This is also a div 4</div>
+
+    <p class="ptag" id="1">It is p1</p>
+    <p class="ptag" id="2">It is p2</p>
+    <p class="ptag" id="3">It is p3</p>
+    <p class="ptag" id="4">It is p4</p>
+    <p class="ptag" id="5">It is p5</p>
+</body>
+<script>
+    let a = document.getElementById("para")
+    console.log(a)
+    console.log(a.innerText) // give only the content do not inclue the tags
+
+    let b = document.getElementsByClassName("tag")
+    console.log(b)
+    console.log(b.innerText) // undefined it will not give the innerText when we use getElementsByClassName
+
+    let c = document.getElementsByTagName("div")
+    console.log(c)
+
+    let d = document.querySelector(".tag") // give the first tag
+    console.log(d)
+    console.log(d.innerText)
+
+    let e = document.querySelectorAll(".tag") // give the all tag detail in the form of nodeList
+    console.log(e)
+
+    let second = document.querySelectorAll(".tag")
+    console.log(e[1].innerText="Rishabh Pandey")  // second div tag text
+
+    // e[1].style.color = "red"  
+    d.style.fontSize = "2.5rem"
+    
+    // Color odd as green and even as red
+    e.forEach((val,i)=>{
+        if(i%2==0){
+            val.style.color ="red";
+        }
+        else{
+            e[i].style.color = "green";
+        }
+    });
+
+    //
+    console.log(a.innerHTML) // give everything inside the tag including the tag
+
+</script>
+<script src="basic.js"></script>
+</html>

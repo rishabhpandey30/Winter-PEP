@@ -1,0 +1,13 @@
+- DOM Manipulation -> Making website dynamic
+                getElementByID, getElementsByClassName, getElementsByTagName, querySelector, querySelectorAll
+
+- When we access though class name and tag name it give the HTML collection(array like object but not array) which contain all tag
+
+- In querySelector it give the first tag or first thing
+
+- In querySelectorAll it will give the NodeList(it is array)
+
+- Difference Between NodeList and HTML collection -> NodeList is Static where as other is dynamic
+
+- innerText and innerHTML -> innerText give the text only which is present inside the tag
+                            innerHTML give the everything present inside the tag including tags 
