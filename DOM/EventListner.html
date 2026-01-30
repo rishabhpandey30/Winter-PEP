@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            }
+         #parent {
+            height: 100px;
+            width: 100px;
+            background-color: cyan;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #child {
+            height: 50px;
+            width: 50px;
+            background-color: greenyellow;
+        }
+        #para {
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <p id="para">I am a para</p>
+    <div id="container"></div>
+
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+
+    <button onclick="GenerateList()">GenerateList</button>
+    <ul id="list">
+
+    </ul>
+
+    <input id="input" type="text" placeholder="Enter the text" oninput="outputTextt()">
+    <h3 id="output"></h3>
+
+    <input id="inputColor" type="text" placeholder="Enter the color" oninput="colorChange()">
+    <h3 id="color">Color is changed</h3>
+
+</body>
+    <script>
+        const para = document.getElementById("para");
+        document.onkeydown = (e) => {
+            para.textContent = para.textContent == "Hello" ? "Hi" : "Hello";
+        }
+
+        const list = document.getElementById("list");
+        list.addEventListener("click", (e)=>{
+            if (e.target.tagName === 'li') {
+                console.log("Clicked:",e.target.textContent);
+            }
+        })
+
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        /* Event Bubbling & Capturing */
+        parent.addEventListener("click", () => {
+            console.log("Parent CAPTURE");
+        }, true);
+        child.addEventListener("click", () => {
+            console.log("Child CAPTURE");
+        }, true);
+        child.addEventListener("click", (e) => {
+            e.stopPropagation();
+            console.log("Child BUBBLE (stopPropagation)");
+        });
+        parent.addEventListener("click", () => {
+            console.log("Parent BUBBLE (won’t run)");
+        });
+
+        //  Event Delegation
+
+        const container = document.getElementById("container");
+        container.onmouseover = () => {
+            container.style.backgroundColor = "green";
+        }
+        container.onmouseout = () => {
+            container.style.backgroundColor = "red";
+        }
+        container.addEventListener("mouseover", () => {
+            container.style.backgroundColor = "green";
+        });
+        container.addEventListener("mouseout", () => {
+            container.style.backgroundColor = "red";
+        });
+
+        // Create List
+        let Fruit = ["apple", "mango", "Grapes","banana"]
+        let ui = document.getElementById("list");
+        function GenerateList(){
+        //  ui.innerHTML = "";
+        Fruit.forEach((val)=>{
+            l = document.createElement("li");
+            l.innerText = val;
+            ui.appendChild(l);
+        })
+    }
+
+    // Input
+    inputText = document.querySelector("#input")
+    outputText = document.querySelector("#output")
+
+    function outputTextt(){
+        outputText.innerText = inputText.value;
+    }
+
+    //Without calling function in html (oninput="outputTextt()")
+    // inputText.oninput =(e) =>{
+    //     // console.log(e.target.value);
+    //     outputText.innerText = e.target.value;
+    // }
+
+    // Changing the Color
+    inner = document.querySelector("#inputColor")
+    colorText =  document.querySelector("#color")
+    function colorChange(){
+        color.style.color = inner.value;
+    }
+
+    </script>
+</html>

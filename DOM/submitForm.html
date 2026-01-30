@@ -1,0 +1,38 @@
+<!-- Create a form with input name, email and password -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><form action="" onsubmit="SubmitForm(event)">
+    <label for="name">Enter the name :</label>
+    <input type="text" class="name" placeholder="Enter Your Name">
+    <br>
+    <label for="email">Enter the Email:</label>
+    <input type="email" class="email" placeholder="Enter Your Email" required>
+    <br>
+    <label for="password">Enter the Password :</label>
+    <input type="password" class="password" placeholder="Enter Your Password" minlength="6" required>
+    <br>
+    <button type="submit" class="submit">Submit</button>
+    </form>
+</body>
+<script>
+    function SubmitForm(event){
+         event.preventDefault();
+         const name = document.querySelector(".name").value;
+        const email = document.querySelector(".email").value;
+        const pass = document.querySelector(".password").value;
+        const output = {
+            name,
+            email,
+            pass
+        }
+        alert("Form is submitted")
+        console.log(output)
+        }
+</script>
+</html>

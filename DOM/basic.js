@@ -47,10 +47,3 @@ card.style.width = "300px";
 card.style.boxShadow ="2px 2px 2px black";
 document.body.append(card);
 }
-
-
-
-
-
-
-

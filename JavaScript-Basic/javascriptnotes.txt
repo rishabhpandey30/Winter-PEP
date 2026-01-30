@@ -49,3 +49,7 @@ for eg . -> a = 12 , b =a then if we change the a then b will not affect
 
 - Reduce -> Combine all elements of an array into a single value
             It take the parameter : 1. callback function 2.initial value
+
+- var --> follow functional and global scope only 
+
+- Scope chain -> block scope -- function scope -- global scope -- not fount then -- ref error
