@@ -11,3 +11,5 @@
 
 - innerText and innerHTML -> innerText give the text only which is present inside the tag
                             innerHTML give the everything present inside the tag including tags 
+
+ - Debouncing is a technique used to limit how many times a function runs, especially when an event fires repeatedly.

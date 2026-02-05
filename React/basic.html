@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Importing babel -->
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+   <div id="root">Hello</div>
+</body>
+
+<!-- without babel -->
+<!-- <script>
+    let root = ReactDOM.createRoot(document.getElementById("root"));
+    // let h1 = React.createElement("h1",
+    // {
+    // style : {color : "blue", margin : "50px"}, 
+    // // children : "This is tag"
+    // },
+        // "This is tag")
+
+    // let h1 = React.createElement("h1",{}, React.createElement("h2",{}, "this is h2"))
+    let arr =["Mango", "Apple", "Grapes", "Banana","Kiwi"];
+
+    let list = React.createElement("ul",{},
+        arr.map((val)=>{
+            return React.createElement("li",{style : {color : "blue"}},val)
+        })
+    )
+
+    let button = React.createElement("button",{onClick :()=> alert("Alert From React")}, "Button")
+    root.render(button);  // accept only one child
+</script> -->
+
+<script type="text/babel">
+
+    //
+    function Greet(props){
+        return (
+            <div>
+                <h1>Hello my name is {props.name} , age {props.age} and city {props.city} </h1>
+                </div>
+        )
+    }
+    // 
+    function greet(){
+        return (
+            <div>
+                <h1>Hello my name is Rishabh </h1>
+                </div>
+        )
+    }
+
+    // React.Fragment 
+    function FragmentUse(){
+        return (
+        <>
+        <h1>Hello</h1>
+        <h1> With -- {20+20} Without brackets-- 20+20</h1>
+        </>
+        );
+    }
+
+    // when we call the function the we haave to wrap it inside the {}
+
+    function New(){
+        let obj = {
+        name : "Rishabh Pandey",
+        age : 20,
+        city : "bareilly"
+        }
+        return (
+            <>
+            {Greet(obj)} 
+
+            <Greet name= "Rishabh" age ={20} city= "Bareilly" />
+            
+            {Greet({name : "Pandey"})}
+            </>
+        )
+    }
+
+    let element = <h1> This is H1 Tag</h1>;
+    let root = ReactDOM.createRoot(document.getElementById("root"));
+
+//Only one will render at a time
+    // root.render(element);   
+    // root.render(greet());   // Function is call give me the desired output
+    // root.render(<greet />);  // It wil not work it show error as the first letter is not in capital
+
+    root.render(<Greet />);   // giving as the react component
+
+    root.render(<FragmentUse/>);   // use of Fragment
+
+    root.render(<New />)
+
+</script>
+</html>

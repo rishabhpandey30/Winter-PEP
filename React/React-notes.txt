@@ -1,0 +1,16 @@
+- Babel -> IT convet the morden js to old, for eg. - Browsers DO NOT understand JSX.
+                                                    JSX:
+                                                    <h1>Hello</h1>
+
+                                                    Babel converts it into:
+                                                    React.createElement("h1", null, "Hello");
+
+- Imperative Programming (HOW to do things)  -> You tell the computer step-by-step instructions.
+
+- Declarative Programming (WHAT you want) -> You describe what the UI should look like, and React handles how to update it.
+                                            focus on result
+
+- React.Fragment -> we can insert the multiple parent inside it without it we cann't
+                    used to group multiple elements without adding an extra HTML tag to the DOM.
+                    To use : <React.Fragment></React.Fragment>
+                    ShortCut : <> </>
