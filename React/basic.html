@@ -46,6 +46,15 @@
                 </div>
         )
     }
+
+    // without props.
+    function Greet2({name, age, city}){
+        return (
+            <div>
+                <h1>Hello my name is {name} , age {age} and city {city} </h1>
+                </div>
+        )
+    }
     // 
     function greet(){
         return (
@@ -77,7 +86,7 @@
             <>
             {Greet(obj)} 
 
-            <Greet name= "Rishabh" age ={20} city= "Bareilly" />
+            <Greet2 name= "Rishabh" age ={20} city= "Bareilly" />
             
             {Greet({name : "Pandey"})}
             </>

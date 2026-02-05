@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Importing babel -->
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">HTML</div>
+</body>
+
+<script type="text/babel">
+
+    function UserForm(){
+        const [detail, setname] = React.useState({
+            name : "",
+            email : "",
+            password : "",
+            gender : ""
+        });
+
+        function handleSubmit(e){
+            e.preventDefault()     // Prevent from reloding the page
+            console.log(detail.name)
+            console.log(detail.email)
+            // console.log(detail.password)
+            console.log(detail.gender)
+            setname({
+                name : "",
+            email : "",
+            password : "",
+            gender : ""
+            })
+        }
+// value= {name} --> this will set our name using state
+        return (
+            <>
+            <h1>Form</h1>
+            <form onSubmit={handleSubmit}>
+                <label>Enter the Name: </label>
+                <input type ="text" name="username" value={detail.name} onChange ={(e)=>setname({...detail, name : e.target.value})} />
+                <br/>
+                <br/>
+                <label>Enter the Email: </label>
+                <input type ="email" name="useremail" value={detail.email} onChange ={(e)=>setname({...detail, email : e.target.value})} />
+                <br/>
+                <br/>
+                <label>Enter the Password: </label>
+                <input type ="password" name="userpass" value={detail.password}  onChange ={(e)=>setname({...detail, password : e.target.value})} />
+                <br/>
+                <br/>
+                <label>Enter the Gender: </label>
+                <select name="usergender" value={detail.gender} onChange ={(e)=>setname({...detail, gender : e.target.value})} >
+                     <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br/>
+                <br/>
+                <button type= "submit"> Submit</button>
+            </form>
+            <br/>
+            </>
+        )
+    }
+
+    function App(){
+        return (
+            <>
+            <UserForm />
+            </>
+        )
+    }
+
+    let element = <h1> React</h1>
+    let root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(element)
+    root.render(<App />)
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-1</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Importing babel -->
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">HTML</div>
+</body>
+    <script type="text/babel">
+    //    let {useState} = React;
+    function Counter(){
+        const[count , setCount] = React.useState(0)   // take 2 arguments count ->value and setCount ->function which set the value
+        let val =0;
+        function Increment(){
+            setCount(count+1);     // it will make the all state into one (batching)
+            setCount(count-1);
+            setCount(count-1);
+            setCount(count+1);     // it will make it one and the function is same so it will change according to last 
+            console.log(count)
+        }
+
+        return (
+            <>
+            <h1>Counter</h1>   
+            <h3>Count : {count}</h3>
+            <button onClick ={Increment}>+</button>
+            </>
+        )
+    }
+        function App(){
+            return (
+                <>
+            <Counter />
+            </>
+            )   
+        }
+
+         let root = ReactDOM.createRoot(document.getElementById("root"));
+         root.render(<App />)
+    </script>
+</html>

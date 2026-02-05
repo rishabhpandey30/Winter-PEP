@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-2</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Importing babel -->
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">HTML</div>
+</body>
+    <script type="text/babel">
+        let obj ={
+            name : "Rishabh",
+            age : 20,
+        }
+        function Card(obj){
+            let [a , setage]  = React.useState(obj.age)
+            function ageIncrease(){
+                setage(a+1)
+            }
+
+            function reset(){
+                setage(obj.age)
+            }
+            return (
+                <>
+                <h1>Detail</h1>
+                <h3>Name : {obj.name}</h3>
+                <h3>Age : {a}</h3>  
+                <button onClick ={ageIncrease}>Increment</button>
+                <button onClick ={reset}>Reset</button>
+                </>
+            )
+        }
+        function App(){
+            return (
+                <>
+            {Card(obj)}
+            </>
+            )   
+        }
+
+         let root = ReactDOM.createRoot(document.getElementById("root"));
+         root.render(<App />)
+    </script>
+</html>

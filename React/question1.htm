@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-1</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Importing babel -->
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    width:280px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.card p{
+    margin:8px 0;
+    font-size:16px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="root">HTML</div>
+</body>
+    <script type="text/babel">
+        let obj ={
+            fname : "Rishabh",
+            lastname : "Pandey",
+            course : "Btech",
+            age : "20",
+            gender : "Male",
+        }
+        function Carduser(props){
+            return (
+                <>
+                    <div className="card" >
+                        <h2> User Detail</h2>
+                        <p>First Name : {props.fname} </p>
+                        <p>Last Name : {props.lastname} </p>
+                        <p>Course : {props.course} </p>
+                        <p>Age : {props.age} </p>
+                        <p>Gender : {props.gender} </p>
+                    </div>
+                </>
+            )
+        }
+
+        function Cardadmin(props){
+            return (
+                <>
+                    <div className="card" >
+                        <h2> Admin Detail</h2>
+                        <p>First Name : {props.fname} </p>
+                        <p>Last Name : {props.lastname} </p>
+                        <p>Course : {props.course} </p>
+                        <p>Age : {props.age} </p>
+                        <p>Gender : {props.gender} </p>
+                    </div>
+                </>
+            )
+        }
+        
+        let role = false;
+        function Card(){
+            if(role == false){
+            return(
+            <>
+            {Carduser(obj)}
+            </>
+
+        )}
+        else{
+            return(
+            <>
+            {Cardadmin(obj)}
+            </>
+        )}
+        }
+
+        function App(){
+            return (
+                <>
+            {Card()}
+            </>
+            )   
+        }
+
+         let root = ReactDOM.createRoot(document.getElementById("root"));
+         root.render(<App />)
+    </script>
+</html>

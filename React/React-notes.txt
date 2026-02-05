@@ -14,3 +14,7 @@
                     used to group multiple elements without adding an extra HTML tag to the DOM.
                     To use : <React.Fragment></React.Fragment>
                     ShortCut : <> </>
+
+- useState -> use to upadate things in the ui
+
+- Batching means React groups multiple state updates into ONE re-render instead of many.
