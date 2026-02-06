@@ -18,3 +18,9 @@
 - useState -> use to upadate things in the ui
 
 - Batching means React groups multiple state updates into ONE re-render instead of many.
+
+- A key is a special attribute used when rendering lists in React. It helps React identify which item changed, added, or removed.
+
+- Object.entries(obj) -> give the Object in the form of array
+- Object.values(obj) -> give the Object value in the form of array
+- Object.keys(obj) -> give the Object keys in the form of array

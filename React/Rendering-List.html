@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Importing babel -->
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">Hello</div>
+</body>
+
+<script type="text/babel">
+
+    function List(){
+        const [data , setValue] = React.useState([
+            {id : 1 , item : "Apple"},
+            {id : 2, item: "Mango" },
+            {id : 3, item: "Grapes"}
+        ]);
+// we use to key to unique identify the each value
+        return (
+            <>
+            <h2>List</h2>
+            <ul>
+                {data.map((val)=> (
+                    <li key={val.id}>{val.item}</li>
+        ))}
+            </ul>
+            </>
+        )
+    }
+    function App(){
+        return(
+            <>
+                <List />
+            </>
+        )
+    }
+
+    let element = "React"
+    let root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(element)
+    root.render(<App />)
+</script>
+</html>

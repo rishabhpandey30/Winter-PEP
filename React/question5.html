@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-5</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Importing babel -->
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">Hello</div>
+</body>
+
+<script type="text/babel">
+
+    function List(){
+        const [user, setUser] = React.useState([
+            {id : 1 , first_name : "Rishabh", last_name : "Pandey", image : "https://static.vecteezy.com/system/resources/thumbnails/024/183/525/small/avatar-of-a-man-portrait-of-a-young-guy-illustration-of-male-character-in-modern-color-style-vector.jpg"},
+            {id : 2 , first_name : "Rahul", last_name : "Sharma", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfE8XWOVe86hLGi8m9mgPTsva_KWjTHbT9iQ&s"},
+            {id : 3 , first_name : "Priya", last_name : "Verma", image: "https://img.freepik.com/free-vector/woman-with-braided-hair-illustration_1308-174675.jpg?semt=ais_hybrid&w=740&q=80"},
+            {id : 4 , first_name : "Neha", last_name : "Gupta", image: "https://img.freepik.com/free-vector/smiling-woman-with-glasses_1308-177859.jpg?semt=ais_hybrid&w=740&q=80"}
+        ]);
+
+        return (
+            <>
+            <h2>Names</h2>
+            <ul>
+                {user.map((data)=>(
+                    <li key={data.id}>{data.first_name} {data.last_name} <br/> <img src={data.image} style={{width : "150px", height: "170px"} }/> <br/></li>
+                ))}
+            </ul>
+            </>
+        )
+    }
+    function App(){
+        return(
+            <>
+                <List />
+            </>
+        )
+    }
+
+    let element = "React"
+    let root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(element)
+    root.render(<App />)
+</script>
+</html>
