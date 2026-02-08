@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-5</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Importing babel -->
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">Hello</div>
+</body>
+
+<script type="text/babel">
+
+    function New(){
+        const [value, setValue] = React.useState([]);
+        const [movieName, setMovie] = React.useState("");
+        async function fetchData(){
+        try{
+            let response = await fetch(
+                "https://pep-class-eb24c-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json"
+        );
+            let result = await response.json();
+            const movieArray = Object.entries(result || {}).map(([id, movie]) => ({
+                id,
+                ...movie
+            }));
+            setValue(result); 
+            console.log(result)
+        }
+        catch (error){
+        error;
+    }
+    }
+
+    async function addMovie(){
+        try{
+            await fetch(
+                "https://pep-class-eb24c-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json",
+                {
+                    method:"POST",
+                    headers:{
+                        "Content-Type":"application/json"
+                    },
+                    body: JSON.stringify({
+                        title: movieName
+                    })
+                }
+            );
+
+            setMovie("");
+            fetchData();
+
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+    return(
+        <>
+        <h2>Fetching API</h2>
+        <input type="text" value={movieName} placeholder="Enter The Movies" onChange={(e)=> setMovie(e.target.value)} />
+        <button onClick={fetchData}>Fetch Movie</button>
+        <button onClick={addMovie}>ADD Movie</button>
+        <ul>
+            {value.map(movie => (
+                <li key={movie.id}>{movie.title}</li>
+            ))}
+        </ul>
+        </>
+    )
+}
+    function App(){
+        return(
+            <>
+            <New />
+            </>
+        )
+    }
+
+    let element = "React"
+    let root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(element)
+    root.render(<App />)
+</script>
+</html>
