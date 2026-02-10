@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question-5</title>
+    <title>fetch</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <!-- Importing babel -->
@@ -24,19 +24,20 @@
                 "https://pep-class-eb24c-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json"
         );
             let result = await response.json();
-            const movieArray = Object.entries(result || {}).map(([id, movie]) => ({
+            const movieArray = Object.entries(result).map(([id,movie])=> ({
                 id,
                 ...movie
             }));
-            setValue(result); 
+            setValue(movieArray);
             console.log(result)
         }
         catch (error){
-        error;
+        console.log(error);
     }
     }
 
     async function addMovie(){
+        if(movieName){
         try{
             await fetch(
                 "https://pep-class-eb24c-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json",
@@ -57,6 +58,10 @@
         }catch(error){
             console.log(error);
         }
+    }
+    else{
+        alert("Please Fill the Movie")
+    }
     }
 
     return(
