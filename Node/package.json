@@ -11,6 +11,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "autocannon": "^8.0.0",
     "is-even": "^1.0.0",
     "qrcode": "^1.5.4"
   }
