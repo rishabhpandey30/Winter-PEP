@@ -1,0 +1,10 @@
+{
+    "post":[
+    {"name":"Rishabh","age":20},
+    {"name":"Pandey","age":20},
+    {"name":"Rishabh Pandey","age":27}
+],
+"order":[
+    {"fruit":"Mango","food":"Daal"}
+]
+}
