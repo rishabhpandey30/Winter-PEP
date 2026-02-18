@@ -77,6 +77,30 @@ app.post("/post/insert",(req,res)=>{
 })
 
 
+//query 
+app.get("/lecture", (req,res)=>{
+    let data = req.query.data;
+    console.log(`Query made for data ${data}`)
+    res.send("Query send")
+})
+
+app.get("/vote",(req,res)=>{
+    let {name,age} = req.query;
+    if(age>18){
+        res.send(`${name} eligible for vote`);
+    }
+    else{
+        res.send(`${name} you are not eligible`)
+    }
+})
+
+// params
+app.get("/params/:id",(req,res)=>{
+    let data = req.params.id;
+    console.log(`Here is your lecture ${data}`);
+    res.send("params made")
+})
+
 let port = 9000;
 app.listen(port, ()=>{
     console.log(`Server is running in the port ${port}`);

@@ -1,14 +1,11 @@
 {
-  "dependencies": {
-    "express": "^5.2.1"
-  },
-  "name": "express",
+  "name": "middleware",
   "version": "1.0.0",
   "description": "",
-  "main": "express.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon express.js"
+    "start" : "nodemon customMiddleware.js"
   },
   "keywords": [],
   "author": "",
